@@ -1,0 +1,35 @@
+.termsText {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #71717a;
+  max-width: 440px;
+  margin: 0 auto 36px auto;
+  text-align: center;
+  font-weight: 400;
+}
+
+.link {
+  color: #71717a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  background: transparent;
+  border: none;
+  font: inherit;
+  padding: 0;
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+
+.link:hover {
+  color: #000000;
+}
+
+@media (max-width: 640px) {
+  .termsText {
+    font-size: 13px;
+    margin-bottom: 28px;
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,92 @@
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 32px;
+  background-color: var(--bg-page);
+  border-bottom: 1px solid #000000;
+  box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+  .nav {
+    padding: 22px 20px;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #000000;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.brandDot {
+  width: 5px;
+  height: 5px;
+  background-color: #000000;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.link {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #71717a;
+  text-decoration: none;
+  transition: color 150ms ease;
+  user-select: none;
+}
+
+.link:hover {
+  color: #000000;
+}
+
+.activeLink {
+  color: #000000;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.signupBtn {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #000000;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: all 150ms ease;
+}
+
+.signupBtn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .links {
+    gap: 16px;
+  }
+  .hideMobile {
+    display: none;
+  }
+}

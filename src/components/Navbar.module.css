@@ -1,0 +1,72 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 36px 32px;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: 24px 20px;
+  }
+}
+
+.navAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  background: transparent;
+  border: none;
+  padding: 6px 0;
+  cursor: pointer;
+  transition: opacity 150ms ease, transform 150ms ease;
+  user-select: none;
+}
+
+.navAction:hover {
+  opacity: 0.6;
+}
+
+.navAction:active {
+  transform: translateY(1px);
+}
+
+.brandCenter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.brandDot {
+  width: 4px;
+  height: 4px;
+  background-color: var(--text-primary);
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+@media (max-width: 500px) {
+  .brandCenter {
+    display: none;
+  }
+}

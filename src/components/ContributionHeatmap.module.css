@@ -1,0 +1,176 @@
+.container {
+  width: 100%;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  padding: 40px 0;
+  margin-bottom: 56px;
+  box-sizing: border-box;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.streakSummary {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #71717a;
+}
+
+.streakHighlight {
+  color: #000000;
+  font-weight: 700;
+}
+
+.graphWrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scrollbar-width: thin;
+}
+
+.monthsRow {
+  display: flex;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: #71717a;
+  text-transform: uppercase;
+  margin-left: 32px;
+  margin-bottom: 8px;
+  min-width: 780px;
+  justify-content: space-between;
+}
+
+.gridArea {
+  display: flex;
+  gap: 10px;
+  min-width: 780px;
+}
+
+.daysCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: #a1a1aa;
+  text-transform: uppercase;
+  height: 98px;
+  padding: 2px 0;
+}
+
+.weeksGrid {
+  display: flex;
+  gap: 3.5px;
+}
+
+.weekCol {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5px;
+}
+
+.cell {
+  width: 11px;
+  height: 11px;
+  border-radius: 0px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 100ms ease;
+  position: relative;
+}
+
+.cell:hover {
+  transform: scale(1.3);
+  z-index: 10;
+  outline: 1px solid #000000;
+}
+
+/* Swiss Monochrome Density Scale */
+.level0 {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+}
+
+.level1 {
+  background-color: #d4d4d8;
+  border: 1px solid #d4d4d8;
+}
+
+.level2 {
+  background-color: #71717a;
+  border: 1px solid #71717a;
+}
+
+.level3 {
+  background-color: #27272a;
+  border: 1px solid #27272a;
+}
+
+.level4 {
+  background-color: #000000;
+  border: 1px solid #000000;
+}
+
+.footerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #71717a;
+  text-transform: uppercase;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legendCells {
+  display: flex;
+  gap: 3px;
+}
+
+.legendCell {
+  width: 10px;
+  height: 10px;
+  border-radius: 0px;
+}
+
+.tooltipInfo {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #000000;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .headerRow {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .streakSummary {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,114 @@
+/* ==========================================================================
+   IdeaHub Design System: Swiss Editorial Brutalism & Minimalist Aesthetics
+   ========================================================================== */
+
+:root {
+  --bg-page: #fafafa;
+  --bg-surface: #ffffff;
+  --text-primary: #111111;
+  --text-secondary: #71717a;
+  --text-tertiary: #a1a1aa;
+  
+  --border-strong: #111111;
+  --border-subtle: #e4e4e7;
+  --border-hover: #000000;
+  
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --btn-width-desktop: 450px;
+  --btn-height: 68px;
+  --radius-subtle: 1px;
+
+  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-normal: 200ms;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+input {
+  font-family: inherit;
+}
+
+/* Accessible focus ring that fits editorial aesthetic */
+button:focus-visible, a:focus-visible, input:focus-visible {
+  outline: 2px solid var(--border-strong);
+  outline-offset: 2px;
+}
+
+/* Animations */
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    max-height: 380px;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInSlide 350ms var(--ease-editorial) forwards;
+}
+
+.animate-expand {
+  animation: expandDown 320ms var(--ease-editorial) forwards;
+  overflow: hidden;
+}

@@ -1,0 +1,206 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+}
+
+.mainContent {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 32px 100px 32px;
+  box-sizing: border-box;
+}
+
+.profileBioSection {
+  border-bottom: 1px solid #000000;
+  padding-bottom: 48px;
+  margin-bottom: 56px;
+}
+
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #71717a;
+  margin-bottom: 12px;
+}
+
+.usernameTitle {
+  font-family: var(--font-sans);
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+
+.userHandle {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: #71717a;
+  margin-bottom: 24px;
+}
+
+.bioText {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #111111;
+  max-width: 760px;
+  margin-bottom: 36px;
+}
+
+.skillsArea {
+  margin-top: 24px;
+}
+
+.skillsLabel {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.skillsPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skillPill {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 6px 14px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.contributionsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  padding: 32px 0;
+  margin-bottom: 56px;
+}
+
+.contribCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.contribVal {
+  font-family: var(--font-mono);
+  font-size: 32px;
+  font-weight: 800;
+  color: #000000;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.contribLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #71717a;
+}
+
+/* SECTION HEADINGS */
+.sectionTitle {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 24px;
+}
+
+.editorialTable {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 56px;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 60px 1fr 180px;
+  align-items: baseline;
+  gap: 24px;
+  border-top: 1px solid #000000;
+  padding: 24px 0;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 150ms ease;
+}
+
+.tableRow:hover {
+  opacity: 0.6;
+}
+
+.tableRow:last-child {
+  border-bottom: 1px solid #000000;
+}
+
+.rowIdx {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.rowTitle {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.015em;
+  margin-bottom: 4px;
+}
+
+.rowSub {
+  font-size: 13px;
+  color: #71717a;
+}
+
+.rowMeta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: right;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .contributionsRow {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .tableRow {
+    grid-template-columns: 40px 1fr;
+  }
+  .rowMeta {
+    grid-column: 2;
+    text-align: left;
+    margin-top: 6px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mainContent {
+    padding: 36px 20px;
+  }
+  .usernameTitle {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,214 @@
+.container {
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.heading {
+  font-family: var(--font-sans);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+
+.termsNotice {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 440px;
+  margin-bottom: 38px;
+  font-weight: 400;
+}
+
+.policyLink {
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: color var(--duration-normal) ease;
+}
+
+.policyLink:hover {
+  color: var(--text-primary);
+}
+
+.buttonStack {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.authButton {
+  position: relative;
+  width: 100%;
+  max-width: var(--btn-width-desktop);
+  height: var(--btn-height);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-subtle);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 28px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: background-color var(--duration-normal) var(--ease-editorial),
+              color var(--duration-normal) var(--ease-editorial),
+              border-color var(--duration-normal) var(--ease-editorial),
+              transform 120ms ease;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.authButton:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+.authButton:active {
+  transform: scale(0.995);
+}
+
+.buttonIcon {
+  position: absolute;
+  left: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  transition: color var(--duration-normal) var(--ease-editorial);
+}
+
+.buttonText {
+  color: inherit;
+  text-align: center;
+}
+
+.moreOptionsTrigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  background: transparent;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: opacity 150ms ease;
+  user-select: none;
+}
+
+.moreOptionsTrigger:hover {
+  opacity: 0.6;
+}
+
+.moreOptionsWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.secondaryStack {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: var(--btn-width-desktop);
+}
+
+.secondaryAuthButton {
+  position: relative;
+  width: 100%;
+  height: 56px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-subtle);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  transition: background-color var(--duration-normal) var(--ease-editorial),
+              color var(--duration-normal) var(--ease-editorial),
+              border-color var(--duration-normal) var(--ease-editorial);
+  box-sizing: border-box;
+}
+
+.secondaryAuthButton:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+.secondaryIcon {
+  position: absolute;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+@media (max-width: 640px) {
+  .heading {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+
+  .termsNotice {
+    font-size: 13px;
+    margin-bottom: 28px;
+    padding: 0 6px;
+  }
+
+  .authButton {
+    height: 64px;
+    font-size: 14.5px;
+    padding: 0 20px;
+  }
+
+  .buttonIcon {
+    left: 20px;
+  }
+
+  .secondaryAuthButton {
+    height: 52px;
+    font-size: 13.5px;
+    padding: 0 18px;
+  }
+
+  .secondaryIcon {
+    left: 18px;
+  }
+}
